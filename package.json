@@ -1,0 +1,41 @@
+{
+  "name": "electron-template",
+  "description":"electron-template description",
+  "author":"electron-template author",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "build":{
+    "appId":"yourAppId",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "directories":{
+      "buildResources":"build",
+      "output":"package"
+    },
+    "linux": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "ia32",
+          "x64"
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "build":"electron-builder build",
+    "endline": ""
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^11.2.0",
+    "electron-builder": "^22.9.1"
+  }
+}
