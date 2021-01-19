@@ -1,18 +1,20 @@
 {
   "name": "electron-template",
-  "description":"electron-template description",
-  "author":"electron-template author",
-  "version": "1.0.0",
+  "lib": "wawa",
+  "dst": "dist",
+  "description": "electron-template description",
+  "author": "electron-template author",
+  "version": "1.0.1",
   "main": "main.js",
   "license": "MIT",
-  "build":{
-    "appId":"yourAppId",
+  "build": {
+    "appId": "yourAppId",
     "mac": {
       "category": "your.app.category.type"
     },
-    "directories":{
-      "buildResources":"build",
-      "output":"package"
+    "directories": {
+      "buildResources": "build",
+      "output": "package"
     },
     "linux": {
       "category": "your.app.category.type"
@@ -28,14 +30,20 @@
     }
   },
   "scripts": {
-    "start": "electron .",
-    "build":"electron-builder build",
+    "make": "grunt",
+    "latest": "yarn upgrade --latest",
+    "start": "yarn make && electron .",
+    "build": "yarn make && electron-builder build",
     "endline": ""
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "electron": "^11.2.0",
-    "electron-builder": "^22.9.1"
+    "electron-builder": "^22.9.1",
+    "grunt": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-nodeunit": "^2.1.0",
+    "grunt-contrib-uglify": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony"
   }
 }
