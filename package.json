@@ -4,7 +4,7 @@
   "dst": "dist",
   "description": "electron-template description",
   "author": "electron-template author",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "main.js",
   "license": "MIT",
   "build": {
@@ -30,7 +30,7 @@
     }
   },
   "scripts": {
-    "make": "grunt",
+    "make": "yarn version --patch && grunt",
     "latest": "yarn upgrade --latest",
     "start": "yarn make && electron .",
     "build": "yarn make && electron-builder build",
